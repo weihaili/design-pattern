@@ -18,13 +18,12 @@ public class Computer implements Cloneable{
 		super();
 	}
 
-	public Computer(String brand, String os, int processor, int size, Date proDate) {
+	public Computer(String brand, String os, int processor, int size) {
 		this();
 		this.brand = brand;
 		this.os = os;
 		this.processor = processor;
 		this.size = size;
-		this.proDate=proDate;
 	}
 
 	public Date getProDate() {
@@ -39,8 +38,7 @@ public class Computer implements Cloneable{
 	 * shallow clone
 	 * prototype field object is not realized clone,they use the same one field object
 	 */
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 		Object obj=super.clone();
 		return obj;
 	}

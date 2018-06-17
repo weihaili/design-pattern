@@ -44,8 +44,7 @@ public class Computer2 implements Cloneable{
 	 * deep clone
 	 * prototype field object is realized clone,they use the different field object
 	 */
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 		Computer2 obj=(Computer2) super.clone();
 		obj.proDate=(Date) this.proDate.clone();
 		return obj;
